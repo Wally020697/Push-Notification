@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+       
+        
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <title>Antibiotic</title>
+         <script type="text/javascript" src="cordova.js"></script>
+         <script>
+         	document.addEventListener("deviceready",ondeviceready,false);
+         	function ondeviceready(){
+         		alert("device ready ....");
+         	}
+         	function pushnotification(){
+         		cordova.plugins.notification.local.schedule({
+         				id :1,
+         				title:"Push Notification",
+         				text:"duration 1hr"
+         		});
+         	}
+         </script>
+
+    </head>
+    <body>
+    	<br/>
+    	<br/>
+    	<input type="button" value="Send Notification" onclick="pushnotification();">
+
+
+
+        </body>
+</html>
